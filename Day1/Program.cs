@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-
-using FileReader;
+﻿using FileReader;
 
 var file = FileReader.FileReader.ReadFile("C:\\SWK5\\Advent of Code\\Day1\\input.txt");
 // var file = new List<string>();

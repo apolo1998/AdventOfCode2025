@@ -18,7 +18,7 @@ int zeroCount = 0;
 foreach (var line in file)
 {
     var converted = line.ToSignedInt();
-    int passes = Math.Abs(converted) / 100; // number of full circles
+    int passes = Math.Abs(converted) / 100;
     zeroCount += passes;
     converted %= 100;
     

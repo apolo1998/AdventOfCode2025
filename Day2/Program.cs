@@ -28,7 +28,6 @@ foreach (var line in result)
     {
         if(line.Length%splitter == 0)
         {
-            bool isIllegal = false;
             var splitInEqualParts = Split(line, splitter);
             var areEqual = splitInEqualParts.Distinct().Count() == 1;
             if (areEqual)

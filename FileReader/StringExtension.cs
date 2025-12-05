@@ -17,4 +17,13 @@ public static class StringExtension
         return number;
 
     }
+
+    public static bool HasBetween(this string s, long number)
+    {
+        var lineSplit = s.Split('-');
+
+        long start = Convert.ToInt64(lineSplit.ElementAt(0));
+        long end = Convert.ToInt64(lineSplit.ElementAt(1));
+        return number >= start && number <= end;
+    }
 }

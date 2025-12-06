@@ -26,4 +26,19 @@ public static class StringExtension
         long end = Convert.ToInt64(lineSplit.ElementAt(1));
         return number >= start && number <= end;
     }
+
+    public static Tuple<long, long> SplitStringToTupel(this string s)
+    {
+        var lineSplit = s.Split('-');
+
+        long start = Convert.ToInt64(lineSplit.ElementAt(0));
+        long end = Convert.ToInt64(lineSplit.ElementAt(1));
+        return new Tuple<long, long>(start, end);
+    }
+    public static bool InRange(this Tuple<long, long> s, long number)
+    {
+        if (number < s.Item1 || number > s.Item2)
+            return false;
+        return true;
+    }
 }
